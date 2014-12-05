@@ -87,7 +87,7 @@ install(TARGETS
      )
 
 install(FILES ${HitFinderLBNE_HEADERS} DESTINATION 
-     ${CMAKE_INSTALL_INCLUDEDIR}/HitFinderLBNE COMPONENT Development )
+     ${CMAKE_INSTALL_INCLUDEDIR}/lbne/HitFinderLBNE COMPONENT Development )
 
 file(GLOB FHICL_FILES 
      [^.]*.fcl

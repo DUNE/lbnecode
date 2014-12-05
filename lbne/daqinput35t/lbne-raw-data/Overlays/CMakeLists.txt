@@ -66,6 +66,6 @@ install(TARGETS
      COMPONENT Runtime 
      )
 
-install(FILES ${Geometry_HEADERS} DESTINATION 
+install(FILES ${Overlays_HEADERS} DESTINATION 
      ${CMAKE_INSTALL_INCLUDEDIR}/lbne/daqinput35t/lbne-raw-data/Overlays COMPONENT Development )
 
