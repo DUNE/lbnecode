@@ -44,7 +44,7 @@ find_package( larevt 1.0.0 )
 find_package( larsim 1.0.0 )
 find_package( larreco 1.0.0 )
 find_package( larpandora 1.0.0 )
-find_package( artdaq_core 1.0.0 )
+find_package( artdaq-core 1.0.0 )
 
 find_package( Boost 1.53.0 
      REQUIRED
@@ -101,7 +101,7 @@ include_directories( ${PostgreSQL_INCLUDE_DIRS})
 include_directories( $ENV{GEANT4_FQ_DIR}/include )
 
 # find_ups_product( artdaq_core v01_03_6 )
-include_directories( ${artdaq_core_INCLUDE_DIRS} )
+include_directories( ${artdaq-core_INCLUDE_DIRS} )
 
 # macros for dictionary and simple_plugin
 #include(ArtDictionary)
