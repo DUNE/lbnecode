@@ -1,5 +1,35 @@
+IF (CETBUILDTOOLS_VERSION)
+
+art_make( BASENAME_ONLY
+	  LIBRARY_NAME lbne_Geometry
+	  LIB_LIBRARIES Geometry
+                        ${MF_MESSAGELOGGER}
+                        ${CETLIB}
+                        ${FHICLCPP}
+                        ${ROOT_BASIC_LIB_LIST}
+	  SERVICE_LIBRARIES Geometry
+	  		lbne_Geometry
+			${MF_UTILITIES}
+	                ${FHICLCPP}
+			${CETLIB}
+                        ${ROOT_GEOM}
+                        ${ROOT_XMLIO}
+                        ${ROOT_GDML}
+			${ROOT_BASIC_LIB_LIST}
+        )							   
 
 add_subdirectory(gdml)
+
+install_headers()
+install_fhicl()
+install_source()
+
+# ======================================================================
+# Everything below this is for an alternate cmake build
+# ======================================================================
+
+ELSE()
+
 
 set(Geometry_HEADERS
      ChannelMap35Alg.h
@@ -51,3 +81,6 @@ file(GLOB FHICL_FILES
 
 install(FILES ${FHICL_FILES} DESTINATION job COMPONENT Runtime)
 
+add_subdirectory(gdml)
+
+ENDIF()

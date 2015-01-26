@@ -1,1 +1,1 @@
-# install_scripts(AS_TEST)
+install_scripts(AS_TEST)

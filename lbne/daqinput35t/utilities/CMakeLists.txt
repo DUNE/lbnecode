@@ -1,9 +1,17 @@
-# art_make(LIB_LIBRARIES
-#   ${ARTDAQ_DAQDATA}
-#   ${CETLIB}
-#   )
-# install_headers()
-# install_source()
+IF (CETBUILDTOOLS_VERSION)
+
+art_make(LIB_LIBRARIES
+  ${ARTDAQ_DAQDATA}
+  ${CETLIB}
+  )
+install_headers()
+install_source()
+
+# ======================================================================
+# Everything below this is for an alternate cmake build
+# ======================================================================
+
+ELSE()
 
 set(utilities_HEADERS
      UnpackFragment.h
@@ -36,3 +44,4 @@ install(TARGETS
 install(FILES ${utilities_HEADERS} DESTINATION 
      ${CMAKE_INSTALL_INCLUDEDIR}/lbne/daqinput35t/utilities COMPONENT Development )
 
+ENDIF()
