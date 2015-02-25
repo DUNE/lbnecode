@@ -1,5 +1,3 @@
-IF (CETBUILDTOOLS_VERSION)
-
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR} )
 
 ADD_SUBDIRECTORY(lbne-raw-data)
@@ -95,28 +93,3 @@ ${ROOT_BASIC_LIB_LIST}
 install_fhicl()
 install_source()
 install_headers()
-
-# ======================================================================
-# Everything below this is for an alternate cmake build
-# ======================================================================
-
-ELSE()
-
-include_directories( ${CMAKE_CURRENT_SOURCE_DIR} )
-
-ADD_SUBDIRECTORY(lbne-raw-data)
-ADD_SUBDIRECTORY(utilities)
-
-art_add_module( SSPDump_module SSPDump_module.cc )
-
-art_add_module( TpcDAQToOffline_module TpcDAQToOffline_module.cc )
-
-art_add_module( TpcMilliSliceDump_module TpcMilliSliceDump_module.cc )
-
-file(GLOB FHICL_FILES 
-     [^.]*.fcl
-     )
-
-install(FILES ${FHICL_FILES} DESTINATION job COMPONENT Runtime)
-
-ENDIF()

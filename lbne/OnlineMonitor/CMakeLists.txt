@@ -1,4 +1,4 @@
-IF (CETBUILDTOOLS_VERSION)
+
 
 simple_plugin(RawEVD35tTree "module"
 			Geometry_service
@@ -25,32 +25,3 @@ install_headers()
 install_fhicl()
 install_source()
 install_scripts()
-
-# ======================================================================
-# Everything below this is for an alternate cmake build
-# ======================================================================
-
-ELSE()
-
-art_add_module( RawEVD35tTree_module RawEVD35tTree_module.cc )
-
-install(TARGETS
-     RawEVD35tTree_module
-     EXPORT lbnecodeLibraries
-     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-     COMPONENT Runtime 
-     )
-
-file(GLOB FHICL_FILES 
-     [^.]*.fcl
-     )
-
-install(FILES ${FHICL_FILES} DESTINATION job COMPONENT Runtime)
-
-install(FILES ${OnlineMonitor_HEADERS} DESTINATION 
-     ${CMAKE_INSTALL_INCLUDEDIR}/lbne/OnlineMonitor COMPONENT Development )
-
-
-ENDIF()

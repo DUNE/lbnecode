@@ -1,4 +1,3 @@
-IF (CETBUILDTOOLS_VERSION)
 
 simple_plugin(RawEVD "module"
 			Geometry_service
@@ -65,35 +64,3 @@ install_headers()
 install_fhicl()
 install_source()
 install_scripts()
-
-
-# ======================================================================
-# Everything below this is for an alternate cmake build
-# ======================================================================
-
-ELSE()
-
-art_add_module( DbigEVD4apaFD_module DbigEVD4apaFD_module.cc )
-
-art_add_module( RawEVD35t_module RawEVD35t_module.cc )
-
-art_add_module( RawEVD_module RawEVD_module.cc )
-
-file(GLOB FHICL_FILES 
-     [^.]*.fcl
-     )
-
-install(FILES ${FHICL_FILES} DESTINATION job COMPONENT Runtime)
-
-install(TARGETS
-     DbigEVD4apaFD_module
-     RawEVD35t_module
-     RawEVD_module
-     EXPORT lbnecodeLibraries
-     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-     COMPONENT Runtime 
-     )
-
-ENDIF()
