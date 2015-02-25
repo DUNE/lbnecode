@@ -10,7 +10,7 @@ endif()
 
 project(lbnecode)
 
-set(lbnecode_VERSION "3.8.2")
+set(lbnecode_VERSION "04.00.01")
 set(lbnecode_VERSION_MAJOR 3)
 set(lbnecode_VERSION_MINOR 8)
 set(lbnecode_VERSION_PATCH 2)
