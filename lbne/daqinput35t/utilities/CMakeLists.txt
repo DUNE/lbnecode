@@ -1,5 +1,5 @@
 IF(ALT_CMAKE)
-INCLUDE(altCMakeLists)
+INCLUDE(altCMakeLists.cmake)
 ELSE()
 art_make(LIB_LIBRARIES
   ${ARTDAQ_DAQDATA}

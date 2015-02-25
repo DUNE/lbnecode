@@ -1,5 +1,5 @@
 IF(ALT_CMAKE)
-INCLUDE(altCMakeLists)
+INCLUDE(altCMakeLists.cmake)
 ELSE()
 
 simple_plugin(CFilter "module"

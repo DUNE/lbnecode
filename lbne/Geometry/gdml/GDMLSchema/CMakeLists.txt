@@ -1,5 +1,5 @@
 IF(ALT_CMAKE)
-INCLUDE(altCMakeLists)
+INCLUDE(altCMakeLists.cmake)
 ELSE()
 # install schema files
 file(GLOB gdml_schema *.xsd)

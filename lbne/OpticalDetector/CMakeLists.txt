@@ -1,5 +1,5 @@
 IF(ALT_CMAKE)
-INCLUDE(altCMakeLists)
+INCLUDE(altCMakeLists.cmake)
 ELSE()
 art_make( BASENAME_ONLY
           LIBRARY_NAME OpticalDetector

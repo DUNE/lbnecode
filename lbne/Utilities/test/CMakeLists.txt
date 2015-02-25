@@ -1,5 +1,5 @@
 IF(ALT_CMAKE)
-INCLUDE(altCMakeLists)
+INCLUDE(altCMakeLists.cmake)
 ELSE()
 cet_enable_asserts()
 
