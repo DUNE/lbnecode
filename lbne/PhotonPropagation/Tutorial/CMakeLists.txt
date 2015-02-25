@@ -1,2 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 install_fhicl()
 install_source()
+ENDIF()

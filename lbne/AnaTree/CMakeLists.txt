@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 
 simple_plugin(AnaTree "module"
 		      RawData
@@ -27,3 +30,4 @@ install_headers()
 install_fhicl()
 install_source()
 install_scripts()
+ENDIF()

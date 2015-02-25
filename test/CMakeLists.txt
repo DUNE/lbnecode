@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 # various integration tests
 
 include(CetTest)
@@ -34,3 +37,4 @@ cet_test(donothing_simul_lbnefd HANDBUILT
   TEST_EXEC lar
   TEST_ARGS --rethrow-all --config ./test_donothing_simul_lbnefd.fcl
 )
+ENDIF()

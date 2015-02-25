@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 # ======================================================================
 #  larsoft main build file
 #
@@ -78,3 +81,4 @@ add_subdirectory(fcl)
 
 # packaging utility
 include(UseCPack)
+ENDIF()

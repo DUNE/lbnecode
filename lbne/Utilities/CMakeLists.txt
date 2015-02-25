@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 
 set( lbne_util_lib_list LArFFT_service
                         LArProperties_service
@@ -49,3 +52,4 @@ install_source()
 
 add_subdirectory(test)
 
+ENDIF()

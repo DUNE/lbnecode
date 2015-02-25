@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 add_subdirectory(Geometry)
 add_subdirectory(Utilities)
 add_subdirectory(Simulation)
@@ -54,3 +57,4 @@ add_subdirectory(LArPandora)
 #     "LArPandoraAlgorithms",
 #     "LArPandoraInterface"
 
+ENDIF()

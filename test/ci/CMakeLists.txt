@@ -1,1 +1,5 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 install_scripts(AS_TEST)
+ENDIF()

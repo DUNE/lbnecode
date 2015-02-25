@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 
 # simple examples using prodsingle
 
@@ -17,3 +20,4 @@ cet_test(prodsingle_lbnefd HANDBUILT
   OPTIONAL_GROUPS RELEASE
 )
 
+ENDIF()

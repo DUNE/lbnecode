@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 art_make( BASENAME_ONLY
           LIBRARY_NAME OpticalDetector
           LIB_LIBRARIES 
@@ -62,3 +65,4 @@ install_source()
 install_fw( LIST sensl_1.dat
             SUBDIRNAME lbne/OpticalDetector )
             
+ENDIF()

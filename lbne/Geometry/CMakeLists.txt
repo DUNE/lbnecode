@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 
 art_make( BASENAME_ONLY
 	  LIBRARY_NAME lbne_Geometry
@@ -22,3 +25,4 @@ add_subdirectory(gdml)
 install_headers()
 install_fhicl()
 install_source()
+ENDIF()

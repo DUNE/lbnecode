@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 
 simple_plugin(lbnezsanalysis "module"
 			Geometry_service
@@ -47,3 +50,4 @@ install_headers()
 install_fhicl()
 install_source()
 install_scripts()
+ENDIF()

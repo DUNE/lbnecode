@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 
 art_make( BASENAME_ONLY
 	  MODULE_LIBRARIES RecoAlg
@@ -28,3 +31,4 @@ art_make( BASENAME_ONLY
 install_headers()
 install_fhicl()
 install_source()
+ENDIF()

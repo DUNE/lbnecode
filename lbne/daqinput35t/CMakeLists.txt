@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR} )
 
 ADD_SUBDIRECTORY(lbne-raw-data)
@@ -93,3 +96,4 @@ ${ROOT_BASIC_LIB_LIST}
 install_fhicl()
 install_source()
 install_headers()
+ENDIF()

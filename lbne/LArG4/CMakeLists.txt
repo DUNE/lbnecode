@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 
 art_make( BASENAME_ONLY
           MODULE_LIBRARIES Geometry
@@ -27,3 +30,4 @@ install_fhicl()
 install_source()
 
 
+ENDIF()

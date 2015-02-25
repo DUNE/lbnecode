@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 cet_enable_asserts()
 
 art_make( NO_PLUGINS
@@ -28,3 +31,4 @@ install_fhicl()
 install_source()
 
 
+ENDIF()

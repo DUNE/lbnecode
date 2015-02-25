@@ -1,3 +1,6 @@
+IF(ALT_CMAKE)
+INCLUDE(altCMakeLists)
+ELSE()
 
 # geometry test on LBNE geometries
 
@@ -62,3 +65,4 @@ simple_plugin ( GeometryTest35 "module"
 
                BASENAME_ONLY
           )
+ENDIF()
