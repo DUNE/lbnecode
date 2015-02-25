@@ -1,18 +1,3 @@
-IF (CETBUILDTOOLS_VERSION)
-
-art_make(LIB_LIBRARIES
-  ${ARTDAQ_DAQDATA}
-  ${CETLIB}
-  )
-install_headers()
-install_source()
-
-# ======================================================================
-# Everything below this is for an alternate cmake build
-# ======================================================================
-
-ELSE()
-
 set(Overlays_HEADERS
      FragmentType.hh
      MicroSlice.hh
@@ -75,5 +60,3 @@ install(TARGETS
 
 install(FILES ${Overlays_HEADERS} DESTINATION 
      ${CMAKE_INSTALL_INCLUDEDIR}/lbne/daqinput35t/lbne-raw-data/Overlays COMPONENT Development )
-
-ENDIF()

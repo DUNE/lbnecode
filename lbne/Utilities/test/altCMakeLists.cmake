@@ -1,41 +1,3 @@
-IF (CETBUILDTOOLS_VERSION)
-
-
-cet_enable_asserts()
-
-art_make( NO_PLUGINS
-          BASENAME_ONLY
-          LIBRARY_NAME  lbne_Utilities
-	  MODULE_LIBRARIES Utilities
-                        ${ART_FRAMEWORK_CORE}
-			${ART_FRAMEWORK_PRINCIPAL}
-			${ART_FRAMEWORK_SERVICES_REGISTRY}
-			${ART_FRAMEWORK_SERVICES_OPTIONAL}
-			${ART_FRAMEWORK_SERVICES_OPTIONAL_TFILESERVICE_SERVICE}
-			${ART_PERSISTENCY_COMMON}
-			${ART_PERSISTENCY_PROVENANCE}
-			${ART_UTILITIES}
-			${MF_MESSAGELOGGER}
-			${MF_UTILITIES}
-	                ${FHICLCPP}
-			${CETLIB}
-                        ${ROOT_GEOM}
-                        ${ROOT_XMLIO}
-                        ${ROOT_GDML}
-			${ROOT_BASIC_LIB_LIST}
-        )
-
-
-install_headers()
-install_fhicl()
-install_source()
-
-# ======================================================================
-# Everything below this is for an alternate cmake build
-# ======================================================================
-
-ELSE()
-
 art_add_module(SignalShapingLBNE10ktTest_module SignalShapingLBNE10ktTest_module.cc)
 
 art_add_module(SignalShapingLBNE35tTest_module SignalShapingLBNE35tTest_module.cc)
@@ -54,7 +16,3 @@ file(GLOB FHICL_FILES
      )
 
 install(FILES ${FHICL_FILES} DESTINATION job COMPONENT Runtime)
-
-
-ENDIF()
-
