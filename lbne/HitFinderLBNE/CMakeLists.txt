@@ -4,7 +4,7 @@ ELSE()
 
 art_make( BASENAME_ONLY
           LIBRARY_NAME     HitFinderLBNE
-	  LIB_LIBRARIES    RecoBase
+          LIB_LIBRARIES    RecoBase
 	  		   RecoAlg
 			   Filters
                            Geometry
@@ -30,7 +30,8 @@ art_make( BASENAME_ONLY
                            ${CLHEP}
 			   ${ROOT_BASIC_LIB_LIST}
          MODULE_LIBRARIES HitFinderLBNE
-	  		   RecoBase
+                           RecoBase
+                           RecoBaseArt
                            Geometry
                            Geometry_service
                            LArProperties_service
