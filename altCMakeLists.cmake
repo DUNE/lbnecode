@@ -20,7 +20,7 @@ set(lbnecode_SOVERSION "1.0.0")
 
 set(lbnecode_DEBUG_POSTFIX "d")
 
-list(INSERT CMAKE_MODULE_PATH 0 ${CMAKE_CURRENT_LIST_DIR}/Modules)
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/Modules ${CMAKE_MODULE_PATH})
 
 include(CMakePackageConfigHelpers)
 include(GNUInstallDirs)
