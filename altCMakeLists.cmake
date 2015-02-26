@@ -148,4 +148,4 @@ install(EXPORT lbnecodeLibraries
 
 
 # packaging utility
-include(artCPack)
+include(ArtCPack)
